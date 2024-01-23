@@ -9,7 +9,8 @@ services:
       - -c
       - |
         rm -f /work/layer.zip &&
-        mkdir /tmp/python &&
+        rm -rf /tmp/python &&
+        mkdir -p /tmp/python &&
         pip install -r /work/requirements.txt -t /tmp/python &&
         cd /tmp &&
         zip -r /work/layer.zip ./python
