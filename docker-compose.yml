@@ -1,16 +1,10 @@
 version: '3'
 services:
   build:
+    container_name: lambda-py-layer
     build: .
     volumes:
       - .:/work
     command: 
       - sh
-      - -c
-      - |
-        rm -f /work/layer.zip &&
-        rm -rf /tmp/python &&
-        mkdir -p /tmp/python &&
-        pip install -r /work/requirements.txt -t /tmp/python &&
-        cd /tmp &&
-        zip -r /work/layer.zip ./python
+      - build-layer.sh
