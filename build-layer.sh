@@ -6,6 +6,6 @@ rm -rf /tmp/python
 mkdir -p /tmp/python
 pip install -r /work/requirements.txt -t /tmp/python
 
-# 
+# create zip
 cd /tmp
 zip -r /work/layer.zip ./python
