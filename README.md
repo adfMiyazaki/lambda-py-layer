@@ -9,7 +9,7 @@ PythonのLambda Layer用のzipを作成するdocker-compose.
 
     ```bash
     docker build . -t lambda-py-layer:latest
-    docker run -v .:/work --rm lambda-py-layer sh build-layer.sh
+    docker run -v .:/work --rm lambda-py-layer build-layer.sh
     ```
 
     `docker-compose`が使える場合は以下のコマンドでも良い。
